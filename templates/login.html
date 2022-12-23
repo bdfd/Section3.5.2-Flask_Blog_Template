@@ -1,0 +1,33 @@
+<!--
+ * @Date         : 2022-12-05 14:13:08
+ * @Author       : BDFD,bdfd2005@gmail.com
+ * @Github       : https://github.com/bdfd
+ * @LastEditTime : 2022-12-08 13:20:28
+ * @LastEditors  : BDFD
+ * @Description  : 
+ * @FilePath     : \templates\login.html
+ * Copyright (c) 2022 by BDFD, All Rights Reserved. 
+-->
+
+{% extends "base.html" %}
+{% block title%}
+Login Page
+{% endblock %}
+
+{% block content %}
+<div>
+    {% with messages = get_flashed_messages()%}
+    {% if messages %}
+    {% for msg in messages%}
+    <p>{{msg}}</p>
+    {% endfor %}
+    {% endif%}
+    {% endwith%}
+</div>
+<form action="#" method="POST">
+    <p>Name:</p>
+    <p><input type="text" name="nm"></p>
+    <p><input type="submit" value="submit"></p>
+</form>
+
+{% endblock %}

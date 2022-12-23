@@ -1,0 +1,25 @@
+<!--
+ * @Date         : 2022-12-05 14:13:08
+ * @Author       : BDFD,bdfd2005@gmail.com
+ * @Github       : https://github.com/bdfd
+ * @LastEditTime : 2022-12-08 14:21:20
+ * @LastEditors  : BDFD
+ * @Description  : 
+ * @FilePath     : \templates\view.html
+ * Copyright (c) 2022 by BDFD, All Rights Reserved. 
+-->
+
+{% extends "base.html" %}
+{% block title%}
+View All User
+{% endblock %}
+
+{% block content %}
+<h1>Hello, This is View Page!</h1>
+<div>
+    {% for item in values %}
+    <p>Name: {{item.name}}</p>
+    <p>Email: {{item.email}}</p>
+    {% endfor %}
+</div>
+{% endblock %}
